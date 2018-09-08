@@ -1,6 +1,5 @@
 
-var surveyStore = 
-{
+var surveyStore = [{
     "fName": "test",
     "photo": "https://github.com/RKaseman",
     "scores": [
@@ -14,5 +13,6 @@ var surveyStore =
         8,
         9,
         10
-    ]
-};
+        ]
+    }];
+
