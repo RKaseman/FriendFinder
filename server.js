@@ -22,11 +22,51 @@ app.use(bodyParser.json());
 // Y
 var router = express.Router();
 
-router.get("/", function (request, response) {
-    response.json({ message: "successful test" });
+
+
+// Y
+// middleware for all requests
+router.use(function (request, response, next) {
+    // cmd window log
+    console.log("message from router.use(function() {} )");
+    next();
+    // ...route(s): router.get
 });
 
-app.use('/api', router);
+// http://localhost:8080/api
+router.get("/", function (request, response) {
+    response.json({ message: "message from router.get('/', function() {} )" });
+});
+
+
+// on routes that end in /bears
+// ----------------------------------------------------
+router.route('/bears')
+
+    // create a bear (accessed at POST http://localhost:8080/api/bears)
+    .post(function(req, res) {
+
+        var bear = new Bear();      // create a new instance of the Bear model
+        bear.name = req.body.name;  // set the bears name (comes from the request)
+
+        // save the bear and check for errors
+        bear.save(function(err) {
+            if (err)
+                res.send(err);
+
+            res.json({ message: 'Bear created!' });
+        });
+
+    });
+
+
+// Y
+// router.get("/", function (request, response) {
+//     response.json({ message: "successful test" });
+// });
+// ^
+
+app.use("/api", router);
 
 // Y
 // http://localhost:8080/api/users?id=4&token=sdfa3&geo=us&test=yes
@@ -40,19 +80,19 @@ app.get("/api/users", function (request, response) {
 });
 
 // http://localhost:8080/api/1
-app.get('/api/:version', function (request, response) {
+app.get("/api/:version", function (request, response) {
     response.send(request.params.version);
 });
 
 
 // Y
 // parameter middleware that will run before the next routes
-app.param('name', function (request, response, next, name) {
+app.param("name", function (request, response, next, name) {
 
     // check if the user with that name exists
     // do some validations
     // add -dude to the name
-    var modified = name + '-dude';
+    var modified = name + "-dude";
 
     // save name to the request
     request.name = modified;
@@ -60,20 +100,20 @@ app.param('name', function (request, response, next, name) {
     next();
 });
 // http://localhost:8080/api/users/chris
-app.get('/api/users/:name', function (request, response) {
+app.get("/api/users/:name", function (request, response) {
     // the user was found and is available in req.user
-    response.send('What is up ' + request.name + '!');
+    response.send("What is up " + request.name + "!");
 });
 
 // Y
 // POST http://localhost:8080/api/users
 // parameters sent with 
-app.post('/api/users', function (request, response) {
+app.post("/api/users", function (request, response) {
     var user_id = request.body.id;
     var token = request.body.token;
     var geo = request.body.geo;
 
-    response.send(user_id + ' ' + token + ' ' + geo);
+    response.send(user_id + " " + token + " " + geo);
 });
 
 
