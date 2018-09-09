@@ -32,14 +32,22 @@ app.use(bodyParser.json());
 
 // ##############################################
 // routes will go here
-app.get("/api/users", function (request, response) {
-    var user_id = request.query.id;
-    var token = request.query.token;
-    var geo = request.query.geo;
-    var test = request.query.test;
+// app.get("/api/users", function (request, response) {
+//     var user_id = request.query.id;
+//     var token = request.query.token;
+//     var geo = request.query.geo;
+//     var test = request.query.test;
 
-    response.send(user_id + " " + token + " " + geo + " " + test);
+//     response.send(user_id + " " + token + " " + geo + " " + test);
+// });
+
+
+// http://localhost:8080/api/1
+app.get('/api/:version', function (request, response) {
+    response.send(request.params.version);
 });
+
+
 // start the server
 app.listen(PORT);
 console.log("Server started! At http://localhost:" + PORT);
