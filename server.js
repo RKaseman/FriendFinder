@@ -13,15 +13,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
-// app.get("/api/friends", function (request, response) {
-//     var fName = request.param("fName");
-//     var photo = request.param("photo");
-//     var scores = request.param("scores");
-
-//     res.send(fName);
-// });
-
-
 // var router = express.Router();
 
 
@@ -31,15 +22,15 @@ app.use(bodyParser.json());
 
 
 // ##############################################
-// routes will go here
-// app.get("/api/users", function (request, response) {
-//     var user_id = request.query.id;
-//     var token = request.query.token;
-//     var geo = request.query.geo;
-//     var test = request.query.test;
+// http://localhost:8080/api/users?id=4&token=sdfa3&geo=us&test=yes
+app.get("/api/users", function (request, response) {
+    var user_id = request.query.id;
+    var token = request.query.token;
+    var geo = request.query.geo;
+    var test = request.query.test;
 
-//     response.send(user_id + " " + token + " " + geo + " " + test);
-// });
+    response.send(user_id + " " + token + " " + geo + " " + test);
+});
 
 
 // http://localhost:8080/api/1
