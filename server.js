@@ -13,11 +13,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
-require("./app/routing/apiRoutes")(app);
-// require("./app/routing/htmlRoutes")(app);
+require("./app/routing/apiRoutes.js")(app);
+require("./app/routing/htmlRoutes.js")(app);
 
 
 // start the server
-app.listen(PORT);
-console.log("server at http://localhost:" + PORT);
+app.listen(PORT, function() {
+    console.log("server at http://localhost:" + PORT);
+});
 
