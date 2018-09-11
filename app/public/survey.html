@@ -6,11 +6,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>FriendFinder</title>
+    <title>FriendFinder - Survey</title>
 
     <!-- Latest compiled and minified CSS & JS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
     <!-- Font Awesome Glyphicons -->
@@ -35,7 +37,6 @@
 
         <h4>Link to Photo Image (Required)</h4>
         <input type="text" id="photo" class="form-control" required>
-
         <hr>
 
         <h3><strong>Question 1</strong></h3>
@@ -60,7 +61,6 @@
             <option value="5">5 (Strongly Agree)</option>
         </select>
 
-
         <h3><strong>Question 3</strong></h3>
         <h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
         <select class="chosen-select" id="q3">
@@ -71,7 +71,6 @@
             <option value="4">4</option>
             <option value="5">5 (Strongly Agree)</option>
         </select>
-
 
         <h3><strong>Question 4</strong></h3>
         <h4>You rarely do something just out of sheer curiosity.</h4>
@@ -84,7 +83,6 @@
             <option value="5">5 (Strongly Agree)</option>
         </select>
 
-
         <h3><strong>Question 5</strong></h3>
         <h4>People can rarely upset you.</h4>
         <select class="chosen-select" id="q5">
@@ -96,7 +94,6 @@
             <option value="5">5 (Strongly Agree)</option>
         </select>
 
-
         <h3><strong>Question 6</strong></h3>
         <h4>It is often difficult for you to relate to other people’s feelings.</h4>
         <select class="chosen-select" id="q6">
@@ -107,7 +104,6 @@
             <option value="4">4</option>
             <option value="5">5 (Strongly Agree)</option>
         </select>
-
 
         <h3><strong>Question 7</strong></h3>
         <h4>In a discussion, truth should be more important than people’s sensitivities.</h4>
@@ -157,10 +153,8 @@
         <br>
         <br>
 
-        <!-- Submit Button -->
-        <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle"
-                aria-hidden="true"></i>
-            Submit</button>
+        <!-- submit button -->
+        <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>Submit</button>
 
         <hr>
         <footer class="footer">
@@ -171,7 +165,7 @@
 
     </div>
 
-    <!-- Modal -->
+    <!-- modal popup -->
     <div id="results-modal" class="modal fade" role="dialog">
         <div class="modal-dialog">
 
@@ -183,8 +177,7 @@
                 </div>
                 <div class="modal-body">
                     <h2 id="match-name"></h2>
-                    <img id="match-img" src="https://github.com/RKaseman/RKaseman.github.io/blob/master/assets/images/20170402_013852sR3.jpg"
-                        alt="">
+                    <img id="match-img" src="https://picsum.photos/g/200/300" alt="">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -259,10 +252,10 @@
                 };
 
                 // AJAX post the data to the friends API.
-                $.post("/api/friends", userData, function (data) {
+                $.post("/api/friends", userData, function(data) {
 
                     // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-                    $("#match-name").append(data.fName);
+                    $("#match-name").text(data.fName);
                     $("#match-img").attr("src", data.photo);
 
                     // Show the modal with the best match

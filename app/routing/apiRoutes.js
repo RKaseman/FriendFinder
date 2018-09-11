@@ -1,12 +1,12 @@
 
 // access to friends.js
-var results = require("../data/friends.js");
+var friends = require("../data/friends.js");
 
 
 module.exports = function(app) {
 
     app.get("/api/friends", function(request, response) {
-        response.json(results);
+        response.json(friends);
     });
 
     app.post("/api/friends", function(request, response) {
@@ -32,24 +32,24 @@ module.exports = function(app) {
         var totalDifference = 0;
 
         // loop through all friends arrays
-        for (var i = 0; i < results.length; i++) {
-            console.log(results[i]);
+        for (var i = 0; i < friends.length; i++) {
+            console.log(friends[i]);
             totalDifference = 0;
-            // loop through each results score array
-            for (var j = 0; j < results[i].scores[j]; j++) {
+            // loop through each friends score array
+            for (var j = 0; j < friends[i].scores[j]; j++) {
                 // scores must be absolute, so Math.abs()
                 // difference of current user scores and all user scores
-                totalDifference += Math.abs(parseInt(userScores[j]) - parseInt(results[i].scores[j]));
+                totalDifference += Math.abs(parseInt(userScores[j]) - parseInt(friends[i].scores[j]));
 
                 // is the current user a better match than any existing
                 if (totalDifference <= match.scoreDif) {
-                    match.fName = results[i].name;
-                    match.photo = results[i].photo;
+                    match.fName = friends[i].fName;
+                    match.photo = friends[i].photo;
                     match.scoreDif = totalDifference;
                 }
             }
         }
-        results.push(userData);
+        friends.push(userData);
         response.json(match);
     });
 
