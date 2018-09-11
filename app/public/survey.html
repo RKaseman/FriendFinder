@@ -32,7 +32,7 @@
         <input type="text" id="name" class="form-control" required>
 
         <h6>Link to Photo Image (Required)</h6>
-        <input type="text" id="photo" class="form-control" required>
+        <input type="text" id="photo" class="form-control" value="https://picsum.photos/g/200/300/?random" required>
         <hr>
 
         <h5><strong>Question 1</strong></h5>
@@ -133,7 +133,8 @@
 
         <h5><strong>Question 9</strong></h5>
         <h6><del>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</del></h6>
-        <h6>You're able to sacrifice the safety and sanity of others to preserve your personal sense of security. (Facts are not mine or yours and the truth doesn't care how you feel about it!)</h6>
+        <h6>You're able to sacrifice the safety and sanity of others to preserve your personal sense of security.</h6>
+        <h6>(p.s. Facts are not mine or yours and Truth doesn't care how you feel about it.)</h6>
         <select class="chosen-select" id="q9">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -209,7 +210,7 @@
                 disable_search_threshold: 10
             },
             ".chosen-select-no-results": {
-                no_results_text: "Oops, nothing found!"
+                no_results_text: "No results"
             },
             ".chosen-select-width": {
                 width: "95%"
