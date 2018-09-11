@@ -17,19 +17,19 @@ var friends = [
         ]
     },
     {
-        "fName": "test2",
-        "photo": "https://picsum.photos/g/200/300",
+        "fName": "Bad Friend",
+        "photo": "https://picsum.photos/g/200/300/?random",
         "scores": [
             "1",
+            "3",
             "1",
+            "5",
             "1",
+            "5",
             "1",
-            "1",
-            "1",
-            "1",
-            "1",
-            "1",
-            "1"
+            "5",
+            "5",
+            "2"
         ]
     }
 ];
