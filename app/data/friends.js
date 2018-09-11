@@ -1,7 +1,7 @@
 
-var friends = [
+var results = [
     {
-        fName: "test1",
+        fName: "Rane",
         photo: "https://raw.githubusercontent.com/RKaseman/RKaseman.github.io/master/assets/images/20170402_013852sR3.jpg",
         scores: [
             "5",
@@ -17,38 +17,22 @@ var friends = [
         ]
     },
     {
-        fName: "test2",
-        photo: "https://raw.githubusercontent.com/RKaseman/RKaseman.github.io/master/assets/images/20170402_013852sR3.jpg",
+        fName: "Pic",
+        photo: "https://picsum.photos/g/200/300",
         scores: [
-            "5",
             "3",
-            "5",
-            "1",
-            "5",
-            "1",
-            "5",
-            "1",
-            "1",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
             "3"
-        ]
-    },
-    {
-        fName: "test3",
-        photo: "https://raw.githubusercontent.com/RKaseman/RKaseman.github.io/master/assets/images/20170402_013852sR3.jpg",
-        scores: [
-            "5",
-            "3",
-            "5",
-            "1",
-            "5",
-            "1",
-            "5",
-            "1",
-            "1",
-            "2"
         ]
     }
 ];
 
-module.exports = friends;
+module.exports = results;
 
