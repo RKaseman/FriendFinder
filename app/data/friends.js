@@ -5,7 +5,7 @@ var friends = [
         "photo": "https://raw.githubusercontent.com/RKaseman/RKaseman.github.io/master/assets/images/20170402_013852sR3.jpg",
         "scores": [
             "5",
-            "3",
+            "5",
             "5",
             "1",
             "5",
@@ -13,15 +13,15 @@ var friends = [
             "5",
             "1",
             "1",
-            "4"
+            "1"
         ]
     },
     {
         "fName": "Bad Friend",
-        "photo": "https://picsum.photos/g/200/300/?random",
+        "photo": "https://picsum.photos/g/384/344/?random",
         "scores": [
             "1",
-            "3",
+            "1",
             "1",
             "5",
             "1",
@@ -29,7 +29,7 @@ var friends = [
             "1",
             "5",
             "5",
-            "2"
+            "5"
         ]
     }
 ];

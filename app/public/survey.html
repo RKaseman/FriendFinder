@@ -16,25 +16,27 @@
     <!-- Chosen -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="wrapper">
 
         <h2>Survey Questions</h2>
         <hr>
 
-        <h5><strong>About You</strong></h5>
-        <h6>Name (Required)</h6>
+        <h4><strong>About You</strong></h4>
+        <h5>Name (Required)</h5>
         <input type="text" id="name" class="form-control" required>
 
-        <h6>Link to Photo Image (Required)</h6>
-        <input type="text" id="photo" class="form-control" value="https://picsum.photos/g/200/300/?random" required>
+        <h5>Link to Photo Image (Required)</h5>
+        <input type="text" id="photo" class="form-control" value="https://picsum.photos/g/384/344/?random" required>
         <hr>
 
-        <h5><strong>Question 1</strong></h5>
-        <h6><del>Your mind is always buzzing with unexplored ideas and plans.</del></h6>
-        <h6>You think about everything, big or small.</h6>
+        <h4><strong>Question 1</strong></h4>
+        <h5><del>Your mind is always buzzing with unexplored ideas and plans.</del></h5>
+        <h5>You think about everything, big or small.</h5>
         <select class="chosen-select" id="q1">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -44,9 +46,9 @@
             <option value="5">5 (Strongly Agree)</option>
         </select>
 
-        <h5><strong>Question 2</strong></h5>
-        <h6><del>Generally speaking, you rely more on your experience than your imagination.</del></h6>
-        <h6>You strike a reasonable balance between fantasy and reality.</h6>
+        <h4><strong>Question 2</strong></h4>
+        <h5><del>Generally speaking, you rely more on your experience than your imagination.</del></h5>
+        <h5>You strike a reasonable balance between fantasy and reality.</h5>
         <select class="chosen-select" id="q2">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -56,9 +58,9 @@
             <option value="5">5 (Strongly Agree)</option>
         </select>
 
-        <h5><strong>Question 3</strong></h5>
-        <h6><del>You find it easy to stay relaxed and focused even when there is some pressure.</del></h6>
-        <h6>You can handle adversity.</h6>
+        <h4><strong>Question 3</strong></h4>
+        <h5><del>You find it easy to stay relaxed and focused even when there is some pressure.</del></h5>
+        <h5>You can handle adversity.</h5>
         <select class="chosen-select" id="q3">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -68,9 +70,9 @@
             <option value="5">5 (Strongly Agree)</option>
         </select>
 
-        <h5><strong>Question 4</strong></h5>
-        <h6><del>You rarely do something just out of sheer curiosity.</del></h6>
-        <h6>You're a dull-witted, uncurious moron.</h6>
+        <h4><strong>Question 4</strong></h4>
+        <h5><del>You rarely do something just out of sheer curiosity.</del></h5>
+        <h5>You're a dull-witted, uncurious moron.</h5>
         <select class="chosen-select" id="q4">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -80,9 +82,9 @@
             <option value="5">5 (Strongly Agree)</option>
         </select>
 
-        <h5><strong>Question 5</strong></h5>
-        <h6><del>People can rarely upset you.</del></h6>
-        <h6>You're hard to offend.</h6>
+        <h4><strong>Question 5</strong></h4>
+        <h5><del>People can rarely upset you.</del></h5>
+        <h5>You're hard to offend.</h5>
         <select class="chosen-select" id="q5">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -92,9 +94,9 @@
             <option value="5">5 (Strongly Agree)</option>
         </select>
 
-        <h5><strong>Question 6</strong></h5>
-        <h6><del>It is often difficult for you to relate to other people’s feelings.</del></h6>
-        <h6>You don't understand some fundamental realities of human psychology.</h6>
+        <h4><strong>Question 6</strong></h4>
+        <h5><del>It is often difficult for you to relate to other people’s feelings.</del></h5>
+        <h5>You don't understand some fundamental realities of human psychology.</h5>
         <select class="chosen-select" id="q6">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -104,9 +106,9 @@
             <option value="5">5 (Strongly Agree)</option>
         </select>
 
-        <h5><strong>Question 7</strong></h5>
-        <h6><del>In a discussion, truth should be more important than people’s sensitivities.</del></h6>
-        <h6>You accept the truth, even if it's uncomfortable.</h6>
+        <h4><strong>Question 7</strong></h4>
+        <h5><del>In a discussion, truth should be more important than people’s sensitivities.</del></h5>
+        <h5>You accept the truth, even if it's uncomfortable.</h5>
         <select class="chosen-select" id="q7">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -116,9 +118,9 @@
             <option value="5">5 (Strongly Agree)</option>
         </select>
 
-        <h5><strong>Question 8</strong></h5>
-        <h6><del>You rarely get carried away by fantasies and ideas.</del></h6>
-        <h6>You have limited imagination.</h6>
+        <h4><strong>Question 8</strong></h4>
+        <h5><del>You rarely get carried away by fantasies and ideas.</del></h5>
+        <h5>You have limited imagination.</h5>
         <select class="chosen-select" id="q8">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -128,10 +130,10 @@
             <option value="5">5 (Strongly Agree)</option>
         </select>
 
-        <h5><strong>Question 9</strong></h5>
-        <h6><del>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</del></h6>
-        <h6>You're more concerned that people like you and you'll endanger everyone to ensure they do.</h6>
-        <h6>(p.s. Facts are not mine or yours. Truth doesn't care how you feel about it.)</h6>
+        <h4><strong>Question 9</strong></h4>
+        <h5><del>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</del></h5>
+        <h5>You're more concerned that people like you and you'll endanger everyone to ensure they do.</h5>
+        <h5>(p.s. Facts are not mine or yours. Truth doesn't care how you feel about it.)</h5>
         <select class="chosen-select" id="q9">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -141,9 +143,9 @@
             <option value="5">5 (Strongly Agree)</option>
         </select>
 
-        <h5><strong>Question 10</strong></h5>
-        <h6><del>You feel more energetic after spending time with a group of people.</del></h6>
-        <h6>You don't like yourself enough to be alone with yourself.</h6>
+        <h4><strong>Question 10</strong></h4>
+        <h5><del>You feel more energetic after spending time with a group of people.</del></h5>
+        <h5>You don't like yourself enough to be alone with yourself.</h5>
         <select class="chosen-select" id="q10">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -186,7 +188,7 @@
                 </div>
                 <div class="modal-body">
                     <h2 id="match-name"></h2>
-                    <img id="match-img" src="https://picsum.photos/g/200/300" alt="">
+                    <img id="match-img" src="https://picsum.photos/g/200/300" alt="" style="max-width:384px;">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
