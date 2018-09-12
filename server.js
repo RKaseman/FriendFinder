@@ -12,7 +12,7 @@ var PORT = process.env.PORT || 8080;
 
 
 // access to js/css
-app.use(express.static("app/public"));
+app.use(express.static("/app/public"));
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
