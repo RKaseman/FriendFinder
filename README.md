@@ -11,3 +11,5 @@ In this activity, you'll build a compatibility-based "FriendFinder" application 
 I was fascinated by the questions on the demo survey and what they really get at. People like shallow measures of compatibility (nothing new) and I wanted to shake this up by translating the original statements into language that better defines the sought after match characteristics. It's seemingly sarcastic, but only to those who've never bothered to ask themselves questions about their own psychology. I think it's more fun than the example.
 
 The back end work on the app was another big challenge for me, but I stuck with it and was pleasantly surprised that it worked well enough when the connection testing phase started.
+
+I want to fix some of the styling and reset the form when it's submitted.

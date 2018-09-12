@@ -12,28 +12,22 @@ module.exports = function(app) {
     app.post("/api/friends", function(request, response) {
 
         // var for best match object to display after submit
-        // is match.scoreDif
         var match = {
             fName: "",
             photo: "",
             scoreDif: 100
         };
 
-        console.log(request.body);
-
         // request.body from user app.post
         var userData = request.body;
         // userScores from .body objects
         var userScores = userData.scores;
-
-        console.log(userScores);
 
         // calculated difference between users
         var totalDifference = 0;
 
         // loop through all friends arrays
         for (var i = 0; i < friends.length; i++) {
-            console.log(friends[i]);
             totalDifference = 0;
             // loop through each friends score array
             for (var j = 0; j < friends[i].scores[j]; j++) {
@@ -49,7 +43,9 @@ module.exports = function(app) {
                 }
             }
         }
+        // add results to friends.js
         friends.push(userData);
+        // return results
         response.json(match);
     });
 

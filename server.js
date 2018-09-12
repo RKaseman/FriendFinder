@@ -3,12 +3,15 @@ var express = require("express");
 var bodyParser = require("body-parser");
 
 
+// instance of express app
 var app = express();
 
 
+// variable port selection
 var PORT = process.env.PORT || 8080;
 
 
+// access to js/css
 app.use(express.static("app/public"));
 
 
