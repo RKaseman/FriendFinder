@@ -1,0 +1,27 @@
+
+body {
+    background-image: url("../images/download567.jpg");
+    background-attachment: fixed;
+    background-color: #222222;
+}
+
+#wrapper {
+    background-color: #222244;
+    /* opacity: 0.95; */
+    border: 1px solid black;
+    margin: 16px auto;
+    color: #bbbbbb;
+    text-shadow: 0.5px 0.5px 1px #000000;
+}
+
+.jumbotron {
+    background-color: #000044;
+    color: #999999;
+    margin: 16px;
+}
+
+#name, #photo {
+    background-color: #bbbbbb;
+    color: #222222;
+}
+
