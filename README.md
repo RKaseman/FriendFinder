@@ -2,9 +2,10 @@
 
 ### Overview
 
-In this activity, you'll build a compatibility-based "FriendFinder" application -- basically a dating app. This full-stack site will take in results from your users' surveys, then compare their answers with those from other users. The app will then display the name and picture of the user with the best overall match. 
+In this activity, you'll build a compatibility-based "FriendFinder" application -- basically a dating app. This full-stack site will take in results from your users' surveys, then compare their answers with those from other users. The app will then display the name and picture of the user with the best overall match.
 
 [Heroku](https://dashboard.heroku.com/apps/friend-finder-by-rmk) - not displaying the app correctly. Investigation is needed since it's correct when I run it locally.
+09/12/2018: the problem was with the `.gitignore` file. I've been updating those files for projects that need it, and managed to include the `assets` folder. What a rookie mistake, but it's filed away for future reference.
 
 - - -
 
